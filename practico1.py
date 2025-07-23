@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
+# Simular una búsqueda de vuelo desde Madrid a Londres en eDreams usando Selenium. No extraeremos los datos (eso se hace en el caso 2), solo automatizaremos el proceso de reserva como si fuéramos un usuario.
+
+
+
 # Inicializar navegador
 driver = webdriver.Chrome()
 driver.get("https://www.edreams.es/")
