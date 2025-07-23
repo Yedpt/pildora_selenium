@@ -153,23 +153,7 @@
 - 📖 Mejora la documentación
 - 🧪 Comparte casos de uso interesantes
 
----
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-<div align="center">
-
-**¡Automatiza tu web testing con Selenium! 🚀**
-
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/tu-usuario/selenium-pildora)
-[![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)](https://selenium.dev/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org/)
-
-</div>
 
 ---
 
@@ -258,3 +242,19 @@ Puedes ejecutar este script cada cierto tiempo automáticamente con una tarea pr
 ¡Felices vacaciones, P5! 🏖️🐚🌞
 
 
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+<div align="center">
+
+**¡Automatiza tu web testing con Selenium! 🚀**
+
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/tu-usuario/selenium-pildora)
+[![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)](https://selenium.dev/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org/)
+
+</div>
