@@ -183,78 +183,19 @@ Si detecta una ganga (por ejemplo, un viaje por menos de 150 €), lanza una *
 
 ## 🧰 Requisitos
 
-Asegúrate de tener Python instalado, y luego instala las siguientes librerías:
+Asegúrate de tener Python instalado, y luego instala las siguiente:
 
 ```bash
-pip install selenium
-pip install webdriver-manager
-
-🛠️ Paso a paso
-
-1. Importar librerías
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-import time
-2. Iniciar el navegador y abrir la web
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.get("https://www.viajeselcorteingles.es/")
-time.sleep(5)
-3. Aceptar cookies (si aparecen)
-try:
-    driver.find_element(By.ID, "onetrust-accept-btn-handler").click()
-    time.sleep(1)
-except:
-    pass
-4. Escribir el destino deseado
-destino = driver.find_element(By.ID, "autocomplete-destination")  # ID puede cambiar
-destino.clear()
-destino.send_keys("Málaga")
-time.sleep(2)
-
-buscar_btn = driver.find_element(By.CSS_SELECTOR, ".search-button")  # Ajustar selector real
-buscar_btn.click()
-time.sleep(5)
-5. Extraer precios de la página de resultados
-precios = driver.find_elements(By.CLASS_NAME, "price")  # Ajustar al HTML actual
-
-for p in precios:
-    print(p.text)
-6. Detectar precios bajos y lanzar alerta
-for p in precios:
-    precio_str = p.text.replace("€", "").replace(".", "").strip()
-    if precio_str.isdigit():
-        precio = int(precio_str)
-        if precio < 150:
-            print("💥 ¡ALERTA! Oferta encontrada por solo:", precio, "€")
-7. Cerrar el navegador
-driver.quit()
-🎉 Resultado
-
-Tu script vigila los precios por ti, como un agente secreto de vacaciones.
-Mientras el resto del mundo refresca la página sin éxito, tú te enteras primero cuando aparece una oferta irresistible.
-
-💡 Nota
-
-La estructura del sitio web puede cambiar, así que es posible que necesites actualizar los selectores (By.ID, By.CLASS_NAME, etc.).
-Puedes ejecutar este script cada cierto tiempo automáticamente con una tarea programada (como cron en Linux o el programador de tareas en Windows).
-¡Felices vacaciones, P5! 🏖️🐚🌞
-
-
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+git clone REPO_URL
+------------------------------
+cd pildora_selenium
+------------------------------
+python -m venv hotel_env
+------------------------------
+hotel_env\Scripts\activate
+------------------------------
+pip install -r requirements.txt
+------------------------------
+python hotel_scraper.py
 
 ---
-
-<div align="center">
-
-**¡Automatiza tu web testing con Selenium! 🚀**
-
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/tu-usuario/selenium-pildora)
-[![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)](https://selenium.dev/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org/)
-
-</div>
